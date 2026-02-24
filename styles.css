@@ -6,10 +6,23 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: #e0e0e0;
     background-color: #0a0a0a;
+    color: #e0e0e0;
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+
+/* Particle effect */
+.particle {
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    width: 2px;
+    height: 2px;
+    background-color: rgba(0, 212, 255, 0.5);
+    border-radius: 50%;
+    animation: float 20s linear infinite;
+    pointer-events: none;
 }
 
 .container {
@@ -31,7 +44,7 @@ nav {
 
 nav .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 1rem 20px;
 }
@@ -56,7 +69,7 @@ nav ul li a {
     transition: color 0.3s;
 }
 
-nav ul li a:hover {
+nav ul li a:hover, nav ul li a.active {
     color: #00d4ff;
 }
 
@@ -80,7 +93,12 @@ header::before {
     bottom: 0;
     background: radial-gradient(circle at 30% 40%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
                 radial-gradient(circle at 70% 60%, rgba(255, 0, 150, 0.1) 0%, transparent 50%);
-    z-index: -1;
+    z-index: 1;
+}
+
+header h1, header h2, header p, .hero-buttons {
+    position: relative;
+    z-index: 2;
 }
 
 header h1 {
@@ -147,6 +165,8 @@ header p {
 section {
     padding: 5rem 0;
     background-color: #0a0a0a;
+    position: relative;
+    z-index: 2;
 }
 
 section h2 {
@@ -178,70 +198,82 @@ section h2::after {
     line-height: 1.8;
 }
 
-/* Skills */
-.skills-container {
-    max-width: 800px;
+/* NEW Grid Skills Section */
+.skills-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
-.skill-item {
-    margin-bottom: 2rem;
+.skill-category-box {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    flex: 1 1 300px;
 }
 
-.skill-info {
+.category-title {
+    color: #e0e0e0;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-family: monospace;
+    letter-spacing: 1px;
+}
+
+.skill-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 1rem;
+}
+
+.skill-card {
+    background: rgba(10, 10, 10, 0.5);
+    border: 2px solid var(--brand);
+    border-radius: 10px;
+    padding: 1rem 0.5rem;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    margin-bottom: 0.5rem;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
-.skill-name {
-    color: #00d4ff;
-    font-size: 1.1rem;
+.skill-card i {
+    font-size: 2.5rem;
+    transition: transform 0.3s ease;
+}
+
+.skill-card span {
+    color: #b0b0b0;
+    font-size: 0.8rem;
     font-weight: bold;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
 }
 
-.skill-percentage {
-    color: #ff0080;
-    font-size: 1rem;
-    font-weight: bold;
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    background: rgba(255, 255, 255, 0.05);
 }
 
-.progress-bar {
-    width: 100%;
-    height: 8px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 4px;
-    overflow: hidden;
-    position: relative;
+.skill-card:hover i {
+    transform: scale(1.1);
 }
 
-.progress-fill {
-    height: 100%;
-    background: linear-gradient(90deg, #00d4ff, #ff0080);
-    border-radius: 4px;
-    transition: width 1.5s ease-in-out;
-    position: relative;
-}
-
-.progress-fill::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-    animation: shimmer 2s infinite;
-}
-
-@keyframes shimmer {
-    0% {
-        transform: translateX(-100%);
-    }
-    100% {
-        transform: translateX(100%);
-    }
+.skill-card:hover span {
+    opacity: 1;
+    transform: translateY(0);
+    color: var(--brand);
 }
 
 /* Projects */
@@ -432,6 +464,8 @@ footer {
     padding: 3rem 0;
     text-align: center;
     border-top: 1px solid rgba(0, 212, 255, 0.1);
+    position: relative;
+    z-index: 2;
 }
 
 footer h2 {
@@ -455,15 +489,38 @@ footer a:hover {
     color: #ff0080;
 }
 
-/* Particle effect */
-.particle {
-    position: absolute;
-    width: 2px;
-    height: 2px;
-    background-color: rgba(0, 212, 255, 0.5);
+/* Social media links */
+.social-links {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.social-links a {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 50%;
-    animation: float 20s linear infinite;
-    pointer-events: none;
+    background: rgba(255, 255, 255, 0.06);
+    color: #00d4ff;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: linear-gradient(45deg, #00d4ff, #ff0080);
+    color: #0a0a0a;
+    transform: translateY(-4px) scale(1.1);
+}
+
+.contact-phone {
+    margin-top: 1rem;
+    color: #b0b0b0;
+    font-size: 1rem;
 }
 
 @keyframes float {
@@ -533,13 +590,12 @@ footer a:hover {
         text-align: center;
     }
 
-    .skills-grid,
     .projects-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
 
-    .skill-category,
+    .skill-category-box,
     .project,
     .education-item {
         padding: 1.5rem;
@@ -547,6 +603,29 @@ footer a:hover {
 
     footer p {
         font-size: 0.9rem;
+    }
+}
+/* Header Avatar */
+.header-avatar {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: floatAvatar 6s ease-in-out infinite;
+    position: relative;
+    z-index: 2;
+}
+
+/* This creates a smooth hovering effect */
+@keyframes floatAvatar {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0px);
     }
 }
 
@@ -575,13 +654,12 @@ footer a:hover {
         font-size: 1.8rem;
     }
 
-    .skill-category,
+    .skill-category-box,
     .project,
     .education-item {
         padding: 1rem;
     }
 
-    .skill-category h3,
     .project h3,
     .education-item h3 {
         font-size: 1.1rem;

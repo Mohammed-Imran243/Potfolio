@@ -1,15 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohammed Imran - MERN Stack Developer</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <title>Mohammed Imran - Full Stack Developer</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
+
 <body>
+    <header>
+        <div class="container">
+            
+            <div class="header-avatar">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 250" width="180" height="180">
+                    <defs>
+                        <linearGradient id="neonGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#00d4ff" />
+                            <stop offset="100%" stop-color="#ff0080" />
+                        </linearGradient>
+                        <filter id="avatarGlow">
+                            <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
+                            <feMerge>
+                                <feMergeNode in="coloredBlur"/>
+                                <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                        </filter>
+                    </defs>
+
+                    <circle cx="125" cy="125" r="110" fill="#0a0a0a" stroke="url(#neonGradient)" stroke-width="4" filter="url(#avatarGlow)" />
+                    
+                    <circle cx="125" cy="125" r="95" fill="none" stroke="#e0e0e0" stroke-width="1.5" stroke-dasharray="10 8" opacity="0.3" />
+
+                    <path d="M 65 230 C 65 160, 185 160, 185 230" fill="none" stroke="url(#neonGradient)" stroke-width="8" stroke-linecap="round" />
+                    <path d="M 90 140 C 90 80, 160 80, 160 140" fill="none" stroke="url(#neonGradient)" stroke-width="8" stroke-linecap="round" />
+
+                    <rect x="100" y="115" width="50" height="16" rx="6" fill="#00d4ff" filter="url(#avatarGlow)" />
+                    
+                    <text x="50" y="120" fill="#ff0080" font-family="monospace" font-size="24" font-weight="bold" opacity="0.6">&lt;/&gt;</text>
+                    <text x="175" y="160" fill="#00d4ff" font-family="monospace" font-size="24" font-weight="bold" opacity="0.6">{ }</text>
+                </svg>
+            </div>
+            <h1>Hi, I'm Mohammed Imran</h1>
+            <h2>Full Stack Developer</h2>
+            <p>Building scalable web applications with passion</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn primary">View My Work</a>
+                <a href="#contact" class="btn secondary">Get In Touch</a>
+            </div>
+        </div>
+    </header>
+
     <nav>
         <div class="container">
-            <h1>Mohammed Imran</h1>
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
@@ -20,110 +66,76 @@
             </ul>
         </div>
     </nav>
-    <header>
-        <div class="container">
-            <h1>Hi, I'm Mohammed Imran</h1>
-            <h2>MERN Stack Developer</h2>
-            <p>Building scalable web applications with passion</p>
-            <div class="hero-buttons">
-                <a href="#projects" class="btn primary">View My Work</a>
-                <a href="#contact" class="btn secondary">Get In Touch</a>
-            </div>
-        </div>
-    </header>
+
+
 
     <section id="about">
         <div class="container">
             <h2>About Me</h2>
-            <p>Aspiring MERN Stack Developer with a solid foundation in front-end and back-end technologies including MongoDB, Express.js, React.js, and Node.js. Passionate about building scalable, full-stack web applications with a focus on clean code and responsive design. Skilled in version control with Git and experienced in using development tools like VS Code. Quick learner with a strong problem-solving mindset and eagerness to contribute to real-world development projects.</p>
+            <p>
+                Aspiring Full Stack Developer with a solid foundation in front-end and back-end
+                technologies including Mysql, Express.js, React.js, Java, springboot, HTML, CSS
+                and Node.js.
+            </p>
         </div>
     </section>
 
     <section id="skills">
         <div class="container">
             <h2>Skills</h2>
-            <div class="skills-container">
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span class="skill-name">HTML</span>
-                        <span class="skill-percentage">90%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 90%;"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span class="skill-name">CSS</span>
-                        <span class="skill-percentage">85%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 85%;"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span class="skill-name">JavaScript</span>
-                        <span class="skill-percentage">80%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 80%;"></div>
+            
+            <div class="skills-layout">
+                
+                <div class="skill-category-box">
+                    <h3 class="category-title">&lt;Frontend/&gt;</h3>
+                    <div class="skill-cards-grid">
+                        <div class="skill-card" style="--brand: #E34F26;">
+                            <i class="devicon-html5-plain colored"></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="skill-card" style="--brand: #1572B6;">
+                            <i class="devicon-css3-plain colored"></i>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="skill-card" style="--brand: #F7DF1E;">
+                            <i class="devicon-javascript-plain colored"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-card" style="--brand: #61DAFB;">
+                            <i class="devicon-react-original colored"></i>
+                            <span>React.js</span>
+                        </div>
                     </div>
                 </div>
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span class="skill-name">React.js</span>
-                        <span class="skill-percentage">75%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 75%;"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span class="skill-name">Node.js</span>
-                        <span class="skill-percentage">70%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 70%;"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span class="skill-name">Express.js</span>
-                        <span class="skill-percentage">70%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 70%;"></div>
+
+                <div class="skill-category-box">
+                    <h3 class="category-title">&lt;Backend/&gt;</h3>
+                    <div class="skill-cards-grid">
+                        <div class="skill-card" style="--brand: #007396;">
+                            <i class="devicon-java-plain colored"></i>
+                            <span>Java</span>
+                        </div>
+                        <div class="skill-card" style="--brand: #6DB33F;">
+                            <i class="devicon-spring-original colored"></i>
+                            <span>Spring Boot</span>
+                        </div>
+                        <div class="skill-card" style="--brand: #4479A1;">
+                            <i class="devicon-mysql-plain colored"></i>
+                            <span>MySQL</span>
+                        </div>
                     </div>
                 </div>
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span class="skill-name">MongoDB</span>
-                        <span class="skill-percentage">65%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 65%;"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span class="skill-name">Python</span>
-                        <span class="skill-percentage">60%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 60%;"></div>
+
+                <div class="skill-category-box">
+                    <h3 class="category-title">&lt;Tools/&gt;</h3>
+                    <div class="skill-cards-grid">
+                        <div class="skill-card" style="--brand: #F05032;">
+                            <i class="devicon-git-plain colored"></i>
+                            <span>Git</span>
+                        </div>
                     </div>
                 </div>
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span class="skill-name">Git</span>
-                        <span class="skill-percentage">75%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 75%;"></div>
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>
@@ -134,12 +146,20 @@
             <div class="projects-grid">
                 <div class="project">
                     <h3>Nick Clone Application</h3>
-                    <p>Developed a full-stack blogging platform using MongoDB, Express.js, React.js, and Node.js. Implemented user authentication, CRUD operations, and responsive design.</p>
-                    <a href="https://nike-web-lake.vercel.app/" target="_blank" class="btn">View Project</a>
+                    <p>
+                        Developed a full-stack blogging platform using MongoDB, Express.js,
+                        React.js, and Node.js.
+                    </p>
+                    <a href="https://nike-web-lake.vercel.app/" target="_blank" class="btn">
+                        View Project
+                    </a>
                 </div>
+
                 <div class="project">
                     <h3>Personal Portfolio Website</h3>
-                    <p>Built a fully responsive personal portfolio using HTML, CSS, and JavaScript.</p>
+                    <p>
+                        Built a fully responsive personal portfolio using HTML, CSS, and JavaScript.
+                    </p>
                     <a href="#" class="btn">View Project</a>
                 </div>
             </div>
@@ -164,6 +184,7 @@
         <div class="container">
             <h2>Resume</h2>
             <div class="resume-content">
+
                 <div class="resume-section">
                     <h3>Experience</h3>
                     <div class="resume-item">
@@ -176,19 +197,20 @@
                         </ul>
                     </div>
                 </div>
+
                 <div class="resume-section">
                     <h3>Skills</h3>
                     <div class="skills-list">
                         <span class="skill-tag">React.js</span>
-                        <span class="skill-tag">Node.js</span>
-                        <span class="skill-tag">MongoDB</span>
-                        <span class="skill-tag">Express.js</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">MySql</span>
+                        <span class="skill-tag">SpringBoot</span>
                         <span class="skill-tag">JavaScript</span>
                         <span class="skill-tag">HTML/CSS</span>
-                        <span class="skill-tag">Python</span>
                         <span class="skill-tag">Git</span>
                     </div>
                 </div>
+
                 <div class="resume-section">
                     <h3>Education</h3>
                     <div class="resume-item">
@@ -200,22 +222,34 @@
                         <p>TPEVR Polytechnic College | 2022</p>
                     </div>
                 </div>
+
             </div>
-            <a href="RESUME_01.pdf" download class="btn primary resume-download">Download Full Resume</a>
+
+            <a href="RESUME_01.pdf" download class="btn primary resume-download">
+                Download Full Resume
+            </a>
         </div>
     </section>
 
-    <footer id="contact">
-        <div class="container">
-            <h2>Contact</h2>
-            <p>Email: mohammedimrank433@gmail.com</p>
-            <p>Phone: +91 8056493714</p>
-            <p>Location: Vellore, Pin – 632001</p>
-            <p>Languages: Tamil, English, Urdu, Hindi</p>
-            <a href="https://www.linkedin.com/in/mohammed-imran-2916a3371/" target="_blank">LinkedIn Profile</a>
+    <footer id="contact" class="container">
+        <h2>Contact</h2>
+
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/mohammed-imran-2916a3371/" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:mohammedimrank433@gmail.com">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://github.com/Mohammed-Imran243" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
         </div>
+
+        <p class="contact-phone">Phone: +91 8056493714</p>
     </footer>
 
     <script src="script.js"></script>
 </body>
+
 </html>
