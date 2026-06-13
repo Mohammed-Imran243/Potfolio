@@ -55,10 +55,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     setInterval(createParticle, 300);
 
-
-
-
-
     const navLinks = document.querySelectorAll('nav ul li a[href^="#"]');
     const sectionsArray = Array.from(sections);
 

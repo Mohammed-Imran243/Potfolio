@@ -6,139 +6,253 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <title>Mohammed Imran - Full Stack Developer</title>
+    
+    <!-- Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
 
 <body>
-    <header>
-        <div class="container">
-
-            <div class="header-avatar">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 250" width="180" height="180">
-                    <defs>
-                        <linearGradient id="neonGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stop-color="#00d4ff" />
-                            <stop offset="100%" stop-color="#ff0080" />
-                        </linearGradient>
-                        <filter id="avatarGlow">
-                            <feGaussianBlur stdDeviation="5" result="coloredBlur" />
-                            <feMerge>
-                                <feMergeNode in="coloredBlur" />
-                                <feMergeNode in="SourceGraphic" />
-                            </feMerge>
-                        </filter>
-                    </defs>
-
-                    <circle cx="125" cy="125" r="110" fill="#0a0a0a" stroke="url(#neonGradient)" stroke-width="4"
-                        filter="url(#avatarGlow)" />
-
-                    <circle cx="125" cy="125" r="95" fill="none" stroke="#e0e0e0" stroke-width="1.5"
-                        stroke-dasharray="10 8" opacity="0.3" />
-
-                    <path d="M 65 230 C 65 160, 185 160, 185 230" fill="none" stroke="url(#neonGradient)"
-                        stroke-width="8" stroke-linecap="round" />
-                    <path d="M 90 140 C 90 80, 160 80, 160 140" fill="none" stroke="url(#neonGradient)" stroke-width="8"
-                        stroke-linecap="round" />
-
-                    <rect x="100" y="115" width="50" height="16" rx="6" fill="#00d4ff" filter="url(#avatarGlow)" />
-
-                    <text x="50" y="120" fill="#ff0080" font-family="monospace" font-size="24" font-weight="bold"
-                        opacity="0.6">&lt;/&gt;</text>
-                    <text x="175" y="160" fill="#00d4ff" font-family="monospace" font-size="24" font-weight="bold"
-                        opacity="0.6">{ }</text>
-                </svg>
-            </div>
-            <h1>Hi, I'm Mohammed Imran</h1>
-            <h2>Full Stack Developer</h2>
-            <p>Building scalable web applications with passion</p>
-            <div class="hero-buttons">
-                <a href="#projects" class="btn primary">View My Work</a>
-                <a href="#contact" class="btn secondary">Get In Touch</a>
-            </div>
-        </div>
-    </header>
-
     <nav>
-        <div class="container">
+        <div class="container nav-container">
+            <h1 class="logo">Mohammed Imran</h1>
             <ul>
                 <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
+                <li><a href="#skills">Tech Stack</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#education">Education</a></li>
                 <li><a href="#resume">Resume</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-
+    <header>
+        <div class="container hero-container center">
+            <div class="header-avatar">
+                <img src="profile.png" alt="Mohammed Imran" class="profile-img">
+            </div>
+            <h1 class="hero-title">Mohammed Imran</h1>
+            <h2 class="hero-subtitle">Full Stack Developer specializing in React.js, Spring Boot, Node.js, and MongoDB.</h2>
+            <p class="hero-desc">Experienced in enterprise application development, REST API integration, testing, and modern web technologies.</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn gradient-btn">View Projects</a>
+                <a href="#contact" class="btn secondary">Contact Me</a>
+            </div>
+        </div>
+    </header>
 
     <section id="about">
         <div class="container">
-            <h2>About Me</h2>
-            <p>
-                Aspiring Full Stack Developer with a solid foundation in front-end and back-end
-                technologies including Mysql, Express.js, React.js, Java, springboot, HTML, CSS
-                and Node.js.
-            </p>
+            <h2 class="section-title">About Me</h2>
+            <div class="about-card">
+                <h3 class="about-title">Full Stack <span class="highlight-blue">Developer</span></h3>
+                <div class="about-divider"></div>
+                <p class="about-lead">Building scalable web applications and<br>enterprise solutions with modern technologies.</p>
+                <p>I am a Full Stack Developer with hands-on experience in building responsive and scalable web applications. I have worked with a variety of technologies including React.js, Spring Boot, Node.js, Express.js, MongoDB, MySQL, and Java to deliver efficient and user-friendly solutions.</p>
+                <p>I have contributed to enterprise-level projects, implementing features, fixing bugs, integrating REST APIs, and ensuring high performance and reliability through testing and collaboration.</p>
+                <p>Currently, I am pursuing my Bachelor of Engineering in Computer Science and Engineering (Expected 2026) and continuously expanding my skills in full stack development and software architecture.</p>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <i class="fas fa-briefcase"></i>
+                        <h4>2+</h4>
+                        <p>Internships</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-code"></i>
+                        <h4>3+</h4>
+                        <p>Projects</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-laptop-code"></i>
+                        <h4>8+</h4>
+                        <p>Technologies</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-rocket"></i>
+                        <h4>100%</h4>
+                        <p>Commitment</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="skills">
+    <section id="skills" class="tech-stack-section">
         <div class="container">
-            <h2>Skills</h2>
-
-            <div class="skills-layout">
-
-                <div class="skill-category-box">
-                    <h3 class="category-title">&lt;Frontend/&gt;</h3>
-                    <div class="skill-cards-grid">
-                        <div class="skill-card" style="--brand: #E34F26;">
-                            <i class="devicon-html5-plain colored"></i>
+            <h2 class="section-title">Tech Stack</h2>
+            
+            <div class="tech-cards-grid">
+                
+                <div class="tech-card">
+                    <div class="tech-card-header">
+                        <i class="fas fa-desktop"></i> FRONTEND
+                    </div>
+                    <ul class="tech-list">
+                        <li>
+                            <div class="tech-icon-box"><i class="devicon-react-original colored"></i></div>
+                            <span>React.js</span>
+                        </li>
+                        <li>
+                            <div class="tech-icon-box"><i class="devicon-html5-plain colored"></i></div>
                             <span>HTML5</span>
-                        </div>
-                        <div class="skill-card" style="--brand: #1572B6;">
-                            <i class="devicon-css3-plain colored"></i>
+                        </li>
+                        <li>
+                            <div class="tech-icon-box"><i class="devicon-css3-plain colored"></i></div>
                             <span>CSS3</span>
+                        </li>
+                        <li>
+                            <div class="tech-icon-box"><i class="devicon-tailwindcss-plain colored"></i></div>
+                            <span>Tailwind CSS</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="tech-card">
+                    <div class="tech-card-header">
+                        <i class="fas fa-server"></i> BACKEND
+                    </div>
+                    <ul class="tech-list">
+                        <li>
+                            <div class="tech-icon-box"><i class="devicon-spring-original colored"></i></div>
+                            <span>Spring Boot</span>
+                        </li>
+                        <li>
+                            <div class="tech-icon-box"><i class="devicon-nodejs-plain colored"></i></div>
+                            <span>Node.js</span>
+                        </li>
+                        <li>
+                            <div class="tech-icon-box"><i class="devicon-express-original"></i></div>
+                            <span>Express.js</span>
+                        </li>
+                        <li>
+                            <div class="tech-icon-box"><i class="devicon-java-plain colored"></i></div>
+                            <span>Java</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="tech-card">
+                    <div class="tech-card-header">
+                        <i class="fas fa-database"></i> DATABASE
+                    </div>
+                    <ul class="tech-list">
+                        <li>
+                            <div class="tech-icon-box"><i class="devicon-mongodb-plain colored"></i></div>
+                            <span>MongoDB</span>
+                        </li>
+                        <li>
+                            <div class="tech-icon-box"><i class="devicon-mysql-plain colored"></i></div>
+                            <span>MySQL</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="tech-card">
+                    <div class="tech-card-header">
+                        <i class="fas fa-tools"></i> TOOLS
+                    </div>
+                    <ul class="tech-list">
+                        <li>
+                            <div class="tech-icon-box"><i class="devicon-git-plain colored"></i></div>
+                            <span>Git</span>
+                        </li>
+                        <li>
+                            <div class="tech-icon-box"><i class="devicon-github-original"></i></div>
+                            <span>GitHub</span>
+                        </li>
+                        <li>
+                            <div class="tech-icon-box"><i class="devicon-jira-plain colored"></i></div>
+                            <span>Jira</span>
+                        </li>
+                        <li>
+                            <div class="tech-icon-box"><i class="devicon-slack-plain colored"></i></div>
+                            <span>Slack</span>
+                        </li>
+                        <li>
+                            <div class="tech-icon-box"><i class="devicon-postman-plain colored"></i></div>
+                            <span>Postman</span>
+                        </li>
+                        <li>
+                            <div class="tech-icon-box"><i class="devicon-vscode-plain colored"></i></div>
+                            <span>VS Code</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            
+            <div class="experience-list">
+                
+                <!-- Opti Supply AI -->
+                <div class="exp-card">
+                    <div class="exp-timeline">
+                        <div class="exp-icon"><i class="fas fa-briefcase"></i></div>
+                        <div class="exp-date">
+                            <span>Jun 2025</span>
+                            <span>Aug 2025</span>
                         </div>
-                        <div class="skill-card" style="--brand: #F7DF1E;">
-                            <i class="devicon-javascript-plain colored"></i>
+                    </div>
+                    <div class="exp-content">
+                        <div class="exp-header">
+                            <h3>Software Engineer Intern</h3>
+                            <span class="company">Opti Supply AI</span>
+                        </div>
+                        <div class="tech-tags">
+                            <span>React.js</span>
+                            <span>Spring Boot</span>
+                            <span>REST API</span>
+                            <span>Testing</span>
+                            <span>Jira</span>
+                            <span>GitHub</span>
+                        </div>
+                        <ul class="exp-bullets">
+                            <li>Contributed to development and enhancement of the ESL Connect enterprise application.</li>
+                            <li>Worked on React.js frontend and Spring Boot backend modules.</li>
+                            <li>Investigated and fixed application bugs and integrated REST APIs.</li>
+                            <li>Participated in functional testing, regression testing, and team collaboration.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Brain Insight -->
+                <div class="exp-card">
+                    <div class="exp-timeline">
+                        <div class="exp-icon"><i class="fas fa-briefcase"></i></div>
+                        <div class="exp-date">
+                            <span>Previous</span>
+                        </div>
+                    </div>
+                    <div class="exp-content">
+                        <div class="exp-header">
+                            <h3>MERN Stack Developer Intern</h3>
+                            <span class="company">Brain Insight</span>
+                        </div>
+                        <div class="tech-tags">
+                            <span>React.js</span>
+                            <span>Node.js</span>
+                            <span>Express.js</span>
+                            <span>MongoDB</span>
                             <span>JavaScript</span>
                         </div>
-                        <div class="skill-card" style="--brand: #61DAFB;">
-                            <i class="devicon-react-original colored"></i>
-                            <span>React.js</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-category-box">
-                    <h3 class="category-title">&lt;Backend/&gt;</h3>
-                    <div class="skill-cards-grid">
-                        <div class="skill-card" style="--brand: #007396;">
-                            <i class="devicon-java-plain colored"></i>
-                            <span>Java</span>
-                        </div>
-                        <div class="skill-card" style="--brand: #6DB33F;">
-                            <i class="devicon-spring-original colored"></i>
-                            <span>Spring Boot</span>
-                        </div>
-                        <div class="skill-card" style="--brand: #4479A1;">
-                            <i class="devicon-mysql-plain colored"></i>
-                            <span>MySQL</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-category-box">
-                    <h3 class="category-title">&lt;Tools/&gt;</h3>
-                    <div class="skill-cards-grid">
-                        <div class="skill-card" style="--brand: #F05032;">
-                            <i class="devicon-git-plain colored"></i>
-                            <span>Git</span>
-                        </div>
+                        <ul class="exp-bullets">
+                            <li>Developed responsive web applications using React.js, HTML5, CSS3, and JavaScript.</li>
+                            <li>Worked with Node.js, Express.js, and MongoDB for backend services.</li>
+                            <li>Implemented CRUD operations and integrated REST APIs.</li>
+                            <li>Participated in debugging and testing activities.</li>
+                        </ul>
                     </div>
                 </div>
 
@@ -148,128 +262,180 @@
 
     <section id="projects">
         <div class="container">
-            <h2>Projects</h2>
+            <h2 class="section-title">Projects</h2>
+            
             <div class="projects-grid">
-                <div class="project">
-                    <h3>Nick Clone Application</h3>
-                    <p>
-                        Developed a full-stack blogging platform using MongoDB, Express.js,
-                        React.js, and Node.js.
-                    </p>
-                    <a href="https://nike-web-lake.vercel.app/" target="_blank" class="btn">
-                        View Project
-                    </a>
+                
+                <!-- ESL Connect -->
+                <div class="project-card featured">
+                    <div class="project-img-container">
+                        <div class="featured-badge"><i class="fas fa-star"></i> Featured Project</div>
+                        <!-- Using the high-quality screenshots you uploaded -->
+                        <img src="esl-preview.png" alt="ESL Connect Preview" class="project-img">
+                    </div>
+                    <div class="project-info">
+                        <div class="project-header">
+                            <h3>ESL Connect</h3>
+                            <span class="project-type">Enterprise App</span>
+                        </div>
+                        <p>
+                            An enterprise-level application facilitating connection and management of services. Built utilizing React.js on the frontend and Spring Boot on the backend, integrating robust REST APIs and ensuring reliability through extensive testing.
+                        </p>
+                        <div class="tech-tags">
+                            <span>React.js</span>
+                            <span>Spring Boot</span>
+                            <span>REST API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://esl.cscs-apps.com" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="https://github.com/Mohammed-Imran243/cscs-digital-price-tag" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="project">
-                    <h3>Personal Portfolio Website</h3>
-                    <p>
-                        Built a fully responsive personal portfolio using HTML, CSS, and JavaScript.
-                    </p>
-                    <a href="#" class="btn">View Project</a>
+                <!-- Nike Landing Page -->
+                <div class="project-card">
+                    <div class="project-img-container">
+                        <!-- Using the high-quality screenshots you uploaded -->
+                        <img src="nike-preview.png" alt="Nike Landing Page Preview" class="project-img">
+                    </div>
+                    <div class="project-info">
+                        <div class="project-header">
+                            <h3>Nike Landing Page</h3>
+                        </div>
+                        <p>
+                            A responsive, pixel-perfect clone of the Nike landing page demonstrating modern UI/UX design principles and advanced CSS layout techniques.
+                        </p>
+                        <div class="tech-tags">
+                            <span>HTML5</span>
+                            <span>Tailwind CSS</span>
+                            <span>React</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://nike-web-lake.vercel.app/" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="https://github.com/Mohammed-Imran243/nike-web" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- Personal Portfolio -->
+                <div class="project-card">
+                    <div class="project-img-container">
+                        <!-- Using the high-quality screenshots you uploaded -->
+                        <img src="portfolio-preview.png" alt="Portfolio Preview" class="project-img">
+                    </div>
+                    <div class="project-info">
+                        <div class="project-header">
+                            <h3>Personal Portfolio</h3>
+                        </div>
+                        <p>
+                            A fully responsive personal portfolio designed to showcase projects and experience, utilizing CSS Grid/Flexbox and custom animations.
+                        </p>
+                        <div class="tech-tags">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://potfolio-fl7n.vercel.app/" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="https://github.com/Mohammed-Imran243/Potfolio" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <section id="education">
-        <div class="container">
-            <h2>Education</h2>
-            <div class="education-item">
-                <h3>Bachelor of Engineering in Computer Science and Engineering</h3>
-                <p>C. Abdul Hakeem College of Engineering & Technology | Expected 2026</p>
-            </div>
-            <div class="education-item">
-                <h3>Diploma in Electrical and Electronic Engineering</h3>
-                <p>TPEVR Polytechnic College | 2022</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="resume">
-        <div class="container">
-            <h2>Resume</h2>
-            <div class="resume-content">
-
-                <div class="resume-section">
-                    <h3>Experience</h3>
-                    <div class="resume-item">
-                        <h4>MERN Stack Developer</h4>
-                        <p class="company">Intern | 2025 - Jun - Aug</p>
-                        <ul>
-                            <li>Developed full-stack web applications using MERN stack</li>
-                            <li>Implemented responsive designs and user authentication</li>
-
-                        </ul>
-                    </div>
+    <section id="bottom-cards">
+        <div class="container bottom-sections">
+            <h2 class="section-title" style="margin-bottom: 1rem;">Let's Connect</h2>
+            
+            <!-- Resume Card -->
+        <section id="resume" class="bottom-card">
+            <div class="bottom-card-content">
+                <div class="bottom-card-header">
+                    <div class="icon-box"><i class="far fa-folder"></i></div>
+                    <h2>Resume</h2>
                 </div>
-
-                <div class="resume-section">
-                    <h3>Skills</h3>
-                    <div class="skills-list">
-                        <span class="skill-tag">React.js</span>
-                        <span class="skill-tag">Java</span>
-                        <span class="skill-tag">MySql</span>
-                        <span class="skill-tag">SpringBoot</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">HTML/CSS</span>
-                        <span class="skill-tag">Git</span>
-                    </div>
-                </div>
-
-                <div class="resume-section">
-                    <h3>Education</h3>
-                    <div class="resume-item">
-                        <h4>Bachelor of Engineering in CSE</h4>
-                        <p>C. Abdul Hakeem College of Engineering & Technology | Expected 2026</p>
-                    </div>
-                    <div class="resume-item">
-                        <h4>Diploma in EEE</h4>
-                        <p>TPEVR Polytechnic College | 2022</p>
-                    </div>
-                </div>
-
-            </div>
-
-            <a href="RESUME_01.pdf" download class="btn primary resume-download">
-                Download Full Resume
-            </a>
-        </div>
-    </section>
-
-    <footer id="contact" class="container">
-
-
-        <section id="contact" class="contact">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <form>
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Email Address" required>
-                <input type="tel" placeholder="Phone Number">
-                <textarea rows="4" placeholder="Your Message"></textarea>
-                <button type="submit" class="btn primary">Send Message</button> 
-            </form>
-        </div>
-    </section>
-
-    
-        <div class="container">
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/mohammed-imran-2916a3371/" target="_blank">
-                    <i class="fab fa-linkedin-in"></i>
+                <p style="margin-bottom: 1.5rem;">For a comprehensive overview of my experience, education,<br>and technical skills.</p>
+                <a href="Mohammed_Imran_Resume.pdf" download class="btn gradient-btn">
+                    <i class="fas fa-download"></i> Download Resume
                 </a>
-                <a href="mailto:mohammedimrank433@gmail.com">
-                    <i class="fas fa-envelope"></i>
-                </a>
-                <a href="https://github.com/Mohammed-Imran243" target="_blank">
-                    <i class="fab fa-github"></i>
-                </a>
+                <p class="resume-meta">PDF &bull; Updated May 2025</p>
             </div>
-            <p class="contact-phone">Phone: +91 8056493714</p>
-            <p style="margin-top: 1rem; font-size: 0.9rem; color: #888;">© 2026 Mohammed Imran. All Rights Reserved.</p>
-        </div>
-    </footer>
+            <div class="resume-illustration">
+                <div class="doc-svg-wrapper">
+                    <i class="far fa-file-alt" style="font-size: 6rem; color: rgba(255,255,255,0.05);"></i>
+                    <div class="download-circle"><i class="fas fa-download"></i></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Card -->
+        <section id="contact" class="bottom-card contact-card">
+            <div class="contact-left">
+                <div class="bottom-card-header">
+                    <div class="icon-box"><i class="far fa-envelope"></i></div>
+                    <h2>Contact Me</h2>
+                </div>
+                <p>Have a project in mind or want to<br>connect? Feel free to reach out.</p>
+                <ul class="contact-details">
+                    <li><i class="far fa-envelope"></i> mohammedimrank433@gmail.com</li>
+                    <li><i class="fas fa-phone-alt"></i> +91 80564 933714</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Vellore, Tamil Nadu, India</li>
+                </ul>
+                <p class="contact-tagline">Let's build something <span class="highlight-blue">great</span> together!</p>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <div class="form-row">
+                        <div class="input-group">
+                            <i class="far fa-user"></i>
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="input-group">
+                            <i class="far fa-envelope"></i>
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                    </div>
+                    <div class="input-group textarea-group">
+                        <i class="fas fa-pen"></i>
+                        <textarea rows="4" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn gradient-btn submit-btn"><i class="far fa-paper-plane"></i> Send Message</button> 
+                    <p class="secure-text"><i class="fas fa-shield-alt"></i> Your information is secure and will never be shared.</p>
+                </form>
+            </div>
+        </section>
+
+        <!-- Footer Card -->
+        <footer class="bottom-card footer-card">
+            <div class="footer-left">
+                <p style="font-weight: 600; color: #fff;">Let's connect</p>
+                <div class="social-links-new">
+                    <a href="https://www.linkedin.com/in/mohammed-imran-2916a3371/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:mohammedimrank433@gmail.com"><i class="far fa-envelope"></i></a>
+                    <a href="https://github.com/Mohammed-Imran243" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="footer-center">
+                <div class="footer-brand">
+                    <span class="code-bracket" style="font-size: 1.5rem;">&lt;/&gt;</span>
+                    <div>
+                        <h3>Mohammed Imran</h3>
+                        <p style="margin:0;">Full Stack Developer</p>
+                    </div>
+                </div>
+                <p class="copyright">&copy; 2026 Mohammed Imran. All rights reserved.</p>
+            </div>
+            <div class="footer-right">
+                <p><i class="fas fa-phone-alt"></i> +91 80564 933714</p>
+                <p><i class="fas fa-map-marker-alt"></i> Vellore, Tamil Nadu, India</p>
+            </div>
+        </footer>
+    </div>
+    </section>
 
     <script src="script.js"></script>
 </body>
