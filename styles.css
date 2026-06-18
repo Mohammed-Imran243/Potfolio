@@ -907,8 +907,20 @@ section {
     .contact-card, .footer-card, .bottom-card {
         flex-direction: column;
     }
+    .footer-card {
+        gap: 2rem;
+        text-align: center;
+    }
+    .footer-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-brand {
+        justify-content: center;
+    }
     .footer-right p {
-        justify-content: flex-start;
+        justify-content: center;
     }
     .about-card {
         padding: 2rem;
